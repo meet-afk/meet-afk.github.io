@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Singh | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // JS to handle theme switching from localStorage
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        /* Simple transition for theme changes */
+        body, main, aside {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .nav-link.active {
+            background-color: #e5e5e5; /* neutral-200 */
+        }
+        .dark .nav-link.active {
+            background-color: #404040; /* neutral-700 */
+        }
+        /* Animation for page transitions */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 font-sans">
+
+    <!-- 
+    ==========================================================================
+    MOBILE HEADER & SIDEBAR
+    ==========================================================================
+    -->
+
+    <!-- Mobile Header & Menu Button -->
+    <div class="md:hidden flex justify-between items-center p-4 border-b border-neutral-200 dark:border-neutral-700 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm sticky top-0 z-20">
+        <a href="#" id="mobile-home-link" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <img src="https://s14.gifyu.com/images/bThIV.gif" alt="Profile Picture" class="rounded-full w-8 h-8">
+            <h1 class="text-xl font-bold">Meet Singh</h1>
+        </a>
+        <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Sidebar -->
+        <aside class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-neutral-800 p-8 border-r border-neutral-200 dark:border-neutral-700 flex flex-col items-center md:items-start shrink-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-30">
+            <!-- Profile Picture -->
+            <div class="w-full text-center md:text-left">
+                <img id="pfp-link" src="https://s14.gifyu.com/images/bThIV.gif" alt="Profile Picture" class="rounded-full w-24 h-24 md:w-32 md:h-32 mx-auto md:mx-0 cursor-pointer">
+                <h1 class="text-2xl font-bold mt-4">Meet Singh</h1>
+                <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Data Analyst | Aspiring Data Scientist.</p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center space-x-4 mt-4">
+                <a href="https://github.com/meet-afk" target="_blank" class="text-neutral-500 hover:text-neutral-800 dark:hover:text-white" title="GitHub">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/meet-afk/" target="_blank" class="text-neutral-500 hover:text-neutral-800 dark:hover:text-white" title="LinkedIn">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                </a>
+                <a href="mailto:meetsingh4150@gmail.com" class="text-neutral-500 hover:text-neutral-800 dark:hover:text-white" title="Email">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.25 6.142c0-1.63.935-3.045 2.375-3.743C5.73 2 7.215 2 8.5 2h7c1.285 0 2.77.001 3.875.399C20.815 3.097 21.75 4.512 21.75 6.142V17.86c0 1.63-.935 3.045-2.375 3.743-1.104.398-2.59.398-3.875.398h-7c-1.285 0-2.77 0-3.875-.399C3.185 20.903 2.25 19.49 2.25 17.858V6.142ZM4 7.894v9.965c0 .35.228.665.558.823.33.158.74.158 1.07.158h12.744c.33 0 .74 0 1.07-.158.33-.158.558-.473.558-.823V7.894l-7.39 5.86-7.61-5.86Z M18.92 6.095C18.618 6.007 18.23 6 18 6H6c-.23 0-.618.007-.92.095l6.92 5.467L18.92 6.095Z"></path></svg>
+                </a>
+                <!-- More Links Dropdown -->
+                <div class="relative" id="more-links-container">
+                    <button id="more-links-button" class="text-neutral-500 hover:text-neutral-800 dark:hover:text-white p-1 rounded-full focus:outline-none">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5.25a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 11.25a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 17.25a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"></path></svg>
+                    </button>
+                    <div id="more-links-dropdown" class="absolute left-0 mt-2 w-40 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md shadow-lg hidden z-40">
+                        <a href="#" target="_blank" class="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 w-full text-left">Twitter / X</a>
+                        <a href="#" target="_blank" class="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 w-full text-left">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="w-full mt-8">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="#" class="nav-link active flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="home">Home</a></li>
+                    <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="projects">Projects</a></li>
+                    <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="resume">Resume</a></li>
+                    <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="blogs">Blogs</a></li>
+                    <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="others">Others</a></li>
+                </ul>
+            </nav>
+
+            <div class="mt-auto w-full">
+                <button id="theme-toggle" class="w-full p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700 flex items-center justify-between text-sm">
+                    <span id="theme-text">Dark Mode</span>
+                    <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-8 md:p-12 md:ml-64">
+            
+            <!-- 
+            ==========================================================================
+            HOME SECTION
+            ==========================================================================
+            -->
+            <section id="home" class="content-section animate-fadeIn">
+                <div class="bg-white dark:bg-neutral-800 p-8 rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                    <h2 class="text-3xl md:text-4xl font-bold">👋 Hey, I'm Your Name!</h2>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+                        I'm an experienced machine learning platform engineer and Python developer. You can check out my resume at <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">resume.yourdomain.com</a>.
+                    </p>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+                        For over 10 years, I've helped companies solve business problems with machine learning in domains such as banking, cybersecurity, environmental science, and weather forecasting. I see my role as helping data scientists and researchers shorten feedback loops and spend time on their business problems (instead of fussing with cloud resources).
+                    </p>
+                     <div class="mt-8">
+                        <h3 class="text-2xl font-semibold">Wrings</h3>
+                        <ul class="list-disc list-inside mt-4 space-y-2">
+                            <li><a href="#" class="text-neutral-600 dark:text-neutral-300 hover:underline">Some Reflections on Being Turned Down for a Lot of Data Science Jobs</a></li>
+                            <li><a href="#" class="text-neutral-600 dark:text-neutral-300 hover:underline">How I Became a Data Scientist Despite Having Been a Math Major</a></li>
+                            <li><a href="#" class="text-neutral-600 dark:text-neutral-300 hover:underline">Goodnight Zoom</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+            ==========================================================================
+            PROJECTS SECTION
+            ==========================================================================
+            -->
+            <section id="projects" class="content-section hidden">
+                <h2 class="text-3xl md:text-4xl font-bold">Projects</h2>
+                <div class="mt-6 grid gap-8 md:grid-cols-2">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Project+1" alt="Project One Preview" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl">Project One</h3>
+                            <p class="mt-2 text-neutral-600 dark:text-neutral-400 h-24">A brief description of the project, the technologies used, and the problem it solves.</p>
+                            <div class="mt-4 flex items-center space-x-4">
+                                <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View on GitHub &rarr;</a>
+                                <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">Live Demo &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://placehold.co/600x400/94a3b8/1e293b?text=Project+2" alt="Project Two Preview" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl">Project Two</h3>
+                            <p class="mt-2 text-neutral-600 dark:text-neutral-400 h-24">A brief description of the project, the technologies used, and the problem it solves.</p>
+                             <div class="mt-4 flex items-center space-x-4">
+                                <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View on GitHub &rarr;</a>
+                                <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">Dashboard &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+            ==========================================================================
+            RESUME SECTION
+            ==========================================================================
+            -->
+            <section id="resume" class="content-section hidden">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold">Resume</h2>
+                    <a href="#" class="bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-white font-bold py-2 px-4 rounded-lg inline-flex items-center transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download PDF
+                    </a>
+                </div>
+            
+                <div class="bg-white dark:bg-neutral-800 p-8 rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                    <!-- Summary Section -->
+                    <div>
+                        <h3 class="text-2xl font-semibold border-b-2 border-neutral-200 dark:border-neutral-600 pb-2">Summary</h3>
+                        <p class="mt-4 text-neutral-600 dark:text-neutral-300">
+                            Highly-motivated and detail-oriented Software Engineer with over 10 years of experience in developing, testing, and maintaining web applications. Proficient in various platforms, languages, and embedded systems. Experienced with the latest cutting-edge development tools and procedures.
+                        </p>
+                    </div>
+            
+                    <!-- Experience Section -->
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-semibold border-b-2 border-neutral-200 dark:border-neutral-600 pb-2">Experience</h3>
+                        <!-- Job 1 -->
+                        <div class="mt-6">
+                            <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                                <h4 class="text-xl font-bold">Senior Software Engineer</h4>
+                                <p class="text-sm text-neutral-500 dark:text-neutral-400">Jan 2020 - Present</p>
+                            </div>
+                            <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Tech Corp Inc. - San Francisco, CA</p>
+                            <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
+                                <li>Led a team of 5 developers in the creation of a new client-facing financial reporting tool.</li>
+                                <li>Architected and implemented a microservices-based infrastructure, improving scalability by 30%.</li>
+                                <li>Mentored junior engineers and conducted code reviews to maintain code quality and standards.</li>
+                            </ul>
+                        </div>
+                        <!-- Job 2 -->
+                        <div class="mt-6">
+                            <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                                <h4 class="text-xl font-bold">Software Engineer</h4>
+                                <p class="text-sm text-neutral-500 dark:text-neutral-400">Jun 2016 - Dec 2019</p>
+                            </div>
+                            <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Innovate Solutions - Boston, MA</p>
+                            <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
+                                <li>Developed and maintained RESTful APIs for the company's flagship SaaS product.</li>
+                                <li>Collaborated with product managers to define feature requirements and timelines.</li>
+                                <li>Improved application performance by identifying and fixing memory leaks.</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <!-- Skills Section -->
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-semibold border-b-2 border-neutral-200 dark:border-neutral-600 pb-2">Skills</h3>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">React</span>
+                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">Node.js</span>
+                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">Docker</span>
+                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">AWS</span>
+                        </div>
+                    </div>
+            
+                    <!-- Education Section -->
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-semibold border-b-2 border-neutral-200 dark:border-neutral-600 pb-2">Education</h3>
+                        <div class="mt-4">
+                             <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                                <h4 class="text-xl font-bold">M.S. in Computer Science</h4>
+                                <p class="text-sm text-neutral-500 dark:text-neutral-400">2014 - 2016</p>
+                            </div>
+                            <p class="text-md text-neutral-600 dark:text-neutral-400 italic">University of Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 
+            ==========================================================================
+            BLOGS SECTION
+            ==========================================================================
+            -->
+            <section id="blogs" class="content-section hidden">
+                <h2 class="text-3xl md:text-4xl font-bold">Blog Posts</h2>
+                <div class="mt-6 space-y-6">
+                     <!-- Blog Post Item 1 -->
+                    <div class="blog-post bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
+                        <h3 class="font-bold text-xl">My First Blog Post</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400">Published on January 1, 2024</p>
+                        <div class="mt-2 text-neutral-600 dark:text-neutral-400">
+                            <p>A short excerpt or summary of the blog post goes here... <span class="full-content hidden">This is the rest of the content that will be revealed. It expands on the initial summary, providing more detail, context, and the main body of the blog post. You can write several paragraphs here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p>
+                        </div>
+                        <button class="read-more-btn text-neutral-600 dark:text-neutral-300 font-medium hover:underline mt-4">Read More &rarr;</button>
+                    </div>
+                     <!-- Blog Post Item 2 -->
+                     <div class="blog-post bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
+                        <h3 class="font-bold text-xl">Understanding JavaScript Closures</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400">Published on February 15, 2024</p>
+                        <div class="mt-2 text-neutral-600 dark:text-neutral-400">
+                            <p>A deep dive into one of JavaScript's fundamental concepts... <span class="full-content hidden">Closures are a core concept in JavaScript that every developer should understand. A closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time. This allows for powerful patterns such as data privacy and currying.</span></p>
+                        </div>
+                        <button class="read-more-btn text-neutral-600 dark:text-neutral-300 font-medium hover:underline mt-4">Read More &rarr;</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 
+            ==========================================================================
+            OTHERS SECTION
+            ==========================================================================
+            -->
+            <section id="others" class="content-section hidden">
+                <h2 class="text-3xl md:text-4xl font-bold">Other Things</h2>
+                 <div class="mt-6 p-6 bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700">
+                    <p>This section can be used for anything else you'd like to share, such as hobbies, talks, or other interests.</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Overlay for mobile menu -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-20 md:hidden"></div>
+
+    <!-- 
+    ==========================================================================
+    JAVASCRIPT LOGIC
+    ==========================================================================
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeText = document.getElementById('theme-text');
+            const themeIcon = document.getElementById('theme-icon');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            const pfpLink = document.getElementById('pfp-link');
+            const mobileHomeLink = document.getElementById('mobile-home-link');
+
+            // More links dropdown elements
+            const moreLinksContainer = document.getElementById('more-links-container');
+            const moreLinksButton = document.getElementById('more-links-button');
+            const moreLinksDropdown = document.getElementById('more-links-dropdown');
+
+            moreLinksButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                moreLinksDropdown.classList.toggle('hidden');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (!moreLinksDropdown.classList.contains('hidden') && !moreLinksContainer.contains(e.target)) {
+                    moreLinksDropdown.classList.add('hidden');
+                }
+            });
+
+            // Mobile menu elements
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const sidebar = document.querySelector('aside');
+            const overlay = document.getElementById('overlay');
+
+            function openMobileMenu() {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+            }
+
+            function closeMobileMenu() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openMobileMenu();
+            });
+
+            overlay.addEventListener('click', closeMobileMenu);
+
+            function setTheme(isDark) {
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeText.textContent = 'Light Mode';
+                    themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>`;
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    themeText.textContent = 'Dark Mode';
+                    themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>`;
+                }
+            }
+            
+            const initialThemeIsDark = document.documentElement.classList.contains('dark');
+            setTheme(initialThemeIsDark);
+
+            themeToggle.addEventListener('click', () => {
+                const isDark = document.documentElement.classList.contains('dark');
+                setTheme(!isDark);
+            });
+
+            // Function to handle navigation
+            function navigateTo(targetId) {
+                // Hide all sections
+                contentSections.forEach(section => {
+                    section.classList.add('hidden');
+                    section.classList.remove('animate-fadeIn'); // Reset animation class
+                });
+
+                // Show the target section
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                    targetSection.classList.add('animate-fadeIn'); // Apply animation
+                }
+                
+                // Update active link
+                navLinks.forEach(link => {
+                    if (link.dataset.target === targetId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            // Navigation link listeners
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.dataset.target;
+                    navigateTo(targetId);
+                    // Close mobile menu on navigation
+                    if (window.innerWidth < 768) {
+                        closeMobileMenu();
+                    }
+                });
+            });
+
+            // Home navigation for PFP and mobile header
+            const navigateHome = (e) => {
+                e.preventDefault();
+                navigateTo('home');
+                if (window.innerWidth < 768) {
+                    closeMobileMenu();
+                }
+            };
+            
+            pfpLink.addEventListener('click', navigateHome);
+            mobileHomeLink.addEventListener('click', navigateHome);
+
+            // Blog "Read More" functionality
+            const readMoreButtons = document.querySelectorAll('.read-more-btn');
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const blogPost = button.closest('.blog-post');
+                    const fullContent = blogPost.querySelector('.full-content');
+                    
+                    fullContent.classList.toggle('hidden');
+
+                    if (fullContent.classList.contains('hidden')) {
+                        button.innerHTML = 'Read More &rarr;';
+                    } else {
+                        button.innerHTML = 'Read Less &larr;';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
