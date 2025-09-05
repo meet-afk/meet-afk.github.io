@@ -69,7 +69,7 @@
             <div class="w-full text-center md:text-left">
                 <img id="pfp-link" src="https://s14.gifyu.com/images/bThIV.gif" alt="Profile Picture" class="rounded-full w-24 h-24 md:w-32 md:h-32 mx-auto md:mx-0 cursor-pointer">
                 <h1 class="text-2xl font-bold mt-4">Meet Singh</h1>
-                <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Data Analyst | Aspiring Data Scientist.</p>
+                <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Data Analyst | Aspiring Data Scientist</p>
             </div>
 
             <!-- Social Links -->
@@ -89,8 +89,9 @@
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5.25a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 11.25a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 17.25a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"></path></svg>
                     </button>
                     <div id="more-links-dropdown" class="absolute left-0 mt-2 w-40 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md shadow-lg hidden z-40">
-                        <a href="#" target="_blank" class="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 w-full text-left">Twitter / X</a>
-                        <a href="#" target="_blank" class="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 w-full text-left">Instagram</a>
+                        <a href="https://www.instagram.com/meet.afk" target="_blank" class="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 w-full text-left">Instagram</a>
+                        <a href="https://www.kaggle.com/meetsingh03" target="_blank" class="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 w-full text-left">Kaggle</a>
+                        <a href="https://public.tableau.com/app/profile/meet.afk/vizzes" target="_blank" class="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700 w-full text-left">Tableau</a>
                     </div>
                 </div>
             </div>
@@ -102,7 +103,10 @@
                     <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="projects">Projects</a></li>
                     <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="resume">Resume</a></li>
                     <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="blogs">Blogs</a></li>
-                    <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="others">Others</a></li>
+                    <!-- 
+                    THIS IS OTHERS SECTION
+                    <li><a href="#" class="nav-link flex items-center p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-700" data-target="others">Others</a></li> 
+                    -->
                 </ul>
             </nav>
 
@@ -115,7 +119,7 @@
         </aside>
 
         <!-- Main Content Area -->
-        <main class="flex-1 p-8 md:p-12 md:ml-64">
+        <div class="flex-1 md:ml-64 flex flex-col"> <main class="flex-grow p-4 md:p-12">
             
             <!-- 
             ==========================================================================
@@ -123,22 +127,50 @@
             ==========================================================================
             -->
             <section id="home" class="content-section animate-fadeIn">
-                <div class="bg-white dark:bg-neutral-800 p-8 rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm">
-                    <h2 class="text-3xl md:text-4xl font-bold">👋 Hey, I'm Your Name!</h2>
-                    <p class="mt-4 text-neutral-600 dark:text-neutral-300">
-                        I'm an experienced machine learning platform engineer and Python developer. You can check out my resume at <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">resume.yourdomain.com</a>.
+                 <div class="bg-white dark:bg-neutral-800 p-6 md:p-8 rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm">
+                    <h2 class="text-3xl md:text-4xl font-bold">Hey, I’m Meet!</h2>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        I’m an aspiring AI & Data Science engineer with a strong foundation in machine learning, data analytics, and software development. Currently pursuing my B.Tech in Artificial Intelligence & Data Science, I’ve been building skills through hands-on projects in data cleaning, visualization, dashboards, and predictive modeling.
                     </p>
-                    <p class="mt-4 text-neutral-600 dark:text-neutral-300">
-                        For over 10 years, I've helped companies solve business problems with machine learning in domains such as banking, cybersecurity, environmental science, and weather forecasting. I see my role as helping data scientists and researchers shorten feedback loops and spend time on their business problems (instead of fussing with cloud resources).
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        You can check out my resume <a href="#" class="internal-link text-neutral-600 dark:text-neutral-300 font-medium hover:underline" data-target="resume">here &rarr;</a>
                     </p>
-                     <div class="mt-8">
-                        <h3 class="text-2xl font-semibold">Wrings</h3>
-                        <ul class="list-disc list-inside mt-4 space-y-2">
-                            <li><a href="#" class="text-neutral-600 dark:text-neutral-300 hover:underline">Some Reflections on Being Turned Down for a Lot of Data Science Jobs</a></li>
-                            <li><a href="#" class="text-neutral-600 dark:text-neutral-300 hover:underline">How I Became a Data Scientist Despite Having Been a Math Major</a></li>
-                            <li><a href="#" class="text-neutral-600 dark:text-neutral-300 hover:underline">Goodnight Zoom</a></li>
-                        </ul>
-                    </div>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        My long-term goal is to grow into a Data Scientist/AI Engineer who bridges the gap between data and decision making, turning complex datasets into actionable insights. I’m especially interested in exploring how AI can contribute to fields like finance, healthcare, and environmental science, where technology can create meaningful change.
+                    </p>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        Beyond academics and work, I value discipline, consistency, and balance, qualities I bring from my fitness journey into my professional life. For me, data science isn’t just about models and algorithms; it’s about continuous learning, problem-solving, and making data work for people.
+                    </p>
+                    
+                    <h2 class="mt-5 text-3xl md:text-2xl font-bold"><a href="#" class="internal-link text-neutral-600 dark:text-neutral-300 font-medium hover:underline" data-target="projects">Projects :</a></h2>
+                
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        I performed data cleaning and exploratory data analysis (EDA) with MySQL, working with large datasets to uncover hidden patterns and trends. This project sharpened my ability to query, preprocess, and interpret structured data efficiently.
+                    </p>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        Using Excel, I transformed raw datasets into a clean and meaningful format, then built an interactive dashboard that presented key business insights in a simple and intuitive way.
+                    </p>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        I explored real-world business and customer data through an Airbnb analysis in Tableau. This project focused on uncovering pricing trends, location patterns, and customer preferences, while leveraging Tableau’s visualization capabilities for storytelling.
+                    </p>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        I designed a Power BI dashboard to present business performance metrics in a clear, professional format. This gave me hands-on experience in connecting multiple data sources and creating dynamic, interactive reports.
+                    </p>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        With the Streamlit library in Python, I developed an interactive web dashboard that brings data insights directly to the browser. This project introduced me to deploying lightweight, user-friendly data apps.
+                    </p>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        You can explore all of my projects in detail <a href="#" class="internal-link text-neutral-600 dark:text-neutral-300 font-medium hover:underline" data-target="projects">here &rarr;</a>
+                    </p>
+                    <hr class="mt-3 mb-6 border-neutral-200 dark:border-neutral-700">
+                    <h2 class="mt-5 text-3xl md:text-2xl font-bold">Others :</h2>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        Check out my blogs <a href="#" class="internal-link text-neutral-600 dark:text-neutral-300 font-medium hover:underline" data-target="blogs">here &rarr;</a>
+                    </p>
+                    <p class="mt-4 text-neutral-600 dark:text-neutral-300 text-left md:text-justify">
+                        Buy me a coffee, <a href="https://buymeacoffee.com/meet.afk" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">when? &rarr;</a>
+                    </p>
+                    
                 </div>
             </section>
 
@@ -154,11 +186,11 @@
                     <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                         <img src="https://placehold.co/600x400/e2e8f0/334155?text=Project+1" alt="Project One Preview" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="font-bold text-xl">Project One</h3>
-                            <p class="mt-2 text-neutral-600 dark:text-neutral-400 h-24">A brief description of the project, the technologies used, and the problem it solves.</p>
+                            <h3 class="font-bold text-xl">E-commerce Customer Analytics Dashboard 🛒</h3>
+                            <p class="mt-2 text-neutral-600 dark:text-neutral-400 h-18">This project is an interactive e-commerce customer analytics dashboard built with Streamlit. It transforms a transactional dataset into actionable business insights by analyzing customer behavior.</p>
                             <div class="mt-4 flex items-center space-x-4">
-                                <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View on GitHub &rarr;</a>
-                                <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">Live Demo &rarr;</a>
+                                <a href="https://github.com/meet-afk/E-commerce-Customer-Analytics" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View on GitHub &rarr;</a>
+                                <a href="https://e-commerce-customer-analysis.streamlit.app/" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">App link &rarr;</a>
                             </div>
                         </div>
                     </div>
@@ -166,11 +198,23 @@
                     <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                         <img src="https://placehold.co/600x400/94a3b8/1e293b?text=Project+2" alt="Project Two Preview" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="font-bold text-xl">Project Two</h3>
-                            <p class="mt-2 text-neutral-600 dark:text-neutral-400 h-24">A brief description of the project, the technologies used, and the problem it solves.</p>
+                            <h3 class="font-bold text-xl">Excel Bike Sales Analysis & Dashboard 📊</h3>
+                            <p class="mt-2 text-neutral-600 dark:text-neutral-400 h-18">An end-to-end project showcasing data cleaning, analysis, and interactive dashboard creation in Microsoft Excel, delivering actionable sales insights through visualizations and structured reporting.</p>
                              <div class="mt-4 flex items-center space-x-4">
-                                <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View on GitHub &rarr;</a>
-                                <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">Dashboard &rarr;</a>
+                                <a href="https://github.com/meet-afk/Excel-Dashboard-Data-Cleaning" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View on GitHub &rarr;</a>
+                                <a href="https://1drv.ms/x/c/363893038bfa8658/EX2GrlzTQqNCprC-h4iLpYQBiFK349-jGJkdHP-upJC2Rw?e=nhJcyh" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">Dashboard &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://placehold.co/600x400/94a3b8/1e293b?text=Project+2" alt="Project Two Preview" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl">Tableau Airbnb Listings Analysis & Dashboard 🏙️</h3>
+                            <p class="mt-2 text-neutral-600 dark:text-neutral-400 h-18">An interactive Tableau dashboard analyzing Airbnb listings data, visualizing pricing patterns, availability trends, and neighborhood insights to help hosts and guests make informed decisions effectively.</p>
+                             <div class="mt-4 flex items-center space-x-4">
+                                <a href="https://github.com/meet-afk/Tableau-Airbnb-Data-Analysis" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View on GitHub &rarr;</a>
+                                <a href="https://public.tableau.com/app/profile/meet.afk/viz/TableauProject1AirbnbDataAnalysis/Dashboard1" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">Dashboard &rarr;</a>
                             </div>
                         </div>
                     </div>
@@ -183,80 +227,142 @@
             ==========================================================================
             -->
             <section id="resume" class="content-section hidden">
-                <div class="flex justify-between items-center mb-8">
-                    <h2 class="text-3xl md:text-4xl font-bold">Resume</h2>
-                    <a href="#" class="bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-white font-bold py-2 px-4 rounded-lg inline-flex items-center transition-colors">
-                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                        Download PDF
-                    </a>
+                            
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+        <div>
+            <h2 class="text-3xl md:text-4xl font-bold">MEET SINGH</h2>
+            <p class="text-neutral-500 dark:text-neutral-400">Data Analyst | Aspiring Data Scientist</p>
+        </div>
+        <a href="https://drive.google.com/file/d/1ICevgYFJYD2ScpgDvASN6U2vph_6taVC/view?usp=sharing" class="bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-white font-bold py-2 px-4 rounded-lg inline-flex items-center transition-colors whitespace-nowrap">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Download PDF
+        </a>
+    </div>
+
+    <!-- Main Resume Content Container -->
+    <div class="bg-white dark:bg-neutral-800 p-6 md:p-8 rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm">
+        
+        <!-- Summary Section -->
+        <div>
+            <p class="text-neutral-600 dark:text-neutral-300">
+                Aspiring Data Analyst skilled in Python, SQL, Excel, Tableau, and Power BI. Experienced in cleaning and visualizing data, building dashboards, and extracting actionable business insights. Passionate about solving real-world problems through data-driven decision-making. Eager to apply analytical skills to real-world problems and grow as a Data Analyst through impactful internships or any kind of opportunities.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="mt-8">
+            <h3 class="text-2xl font-semibold">Skills</h3>
+            <hr class="mt-3 mb-6 border-neutral-200 dark:border-neutral-700">
+            <ul class="list-disc list-inside text-neutral-600 dark:text-neutral-300 space-y-2">
+                <li><strong>Languages:</strong> Python | SQL (MySQL, PostgreSQL, SQL Server)</li>
+                <li><strong>Visualization:</strong> Power BI | Tableau | Excel</li>
+                <li><strong>Other:</strong> Data Cleaning | Data Modeling | DAX | Pandas | NumPy | MatPlotLib</li>
+            </ul>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="mt-8">
+            <h3 class="text-2xl font-semibold">Projects</h3>
+            <hr class="mt-3 mb-6 border-neutral-200 dark:border-neutral-700">
+            <!-- Project 1 -->
+            <div class="mt-6">
+                <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                    <h4 class="text-lg font-bold uppercase">AIRBNB DATA ANALYSIS USING TABLEAU</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">January 2025</p>
                 </div>
-            
-                <div class="bg-white dark:bg-neutral-800 p-8 rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm">
-                    <!-- Summary Section -->
-                    <div>
-                        <h3 class="text-2xl font-semibold border-b-2 border-neutral-200 dark:border-neutral-600 pb-2">Summary</h3>
-                        <p class="mt-4 text-neutral-600 dark:text-neutral-300">
-                            Highly-motivated and detail-oriented Software Engineer with over 10 years of experience in developing, testing, and maintaining web applications. Proficient in various platforms, languages, and embedded systems. Experienced with the latest cutting-edge development tools and procedures.
-                        </p>
-                    </div>
-            
-                    <!-- Experience Section -->
-                    <div class="mt-8">
-                        <h3 class="text-2xl font-semibold border-b-2 border-neutral-200 dark:border-neutral-600 pb-2">Experience</h3>
-                        <!-- Job 1 -->
-                        <div class="mt-6">
-                            <div class="flex flex-col sm:flex-row justify-between items-baseline">
-                                <h4 class="text-xl font-bold">Senior Software Engineer</h4>
-                                <p class="text-sm text-neutral-500 dark:text-neutral-400">Jan 2020 - Present</p>
-                            </div>
-                            <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Tech Corp Inc. - San Francisco, CA</p>
-                            <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
-                                <li>Led a team of 5 developers in the creation of a new client-facing financial reporting tool.</li>
-                                <li>Architected and implemented a microservices-based infrastructure, improving scalability by 30%.</li>
-                                <li>Mentored junior engineers and conducted code reviews to maintain code quality and standards.</li>
-                            </ul>
-                        </div>
-                        <!-- Job 2 -->
-                        <div class="mt-6">
-                            <div class="flex flex-col sm:flex-row justify-between items-baseline">
-                                <h4 class="text-xl font-bold">Software Engineer</h4>
-                                <p class="text-sm text-neutral-500 dark:text-neutral-400">Jun 2016 - Dec 2019</p>
-                            </div>
-                            <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Innovate Solutions - Boston, MA</p>
-                            <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
-                                <li>Developed and maintained RESTful APIs for the company's flagship SaaS product.</li>
-                                <li>Collaborated with product managers to define feature requirements and timelines.</li>
-                                <li>Improved application performance by identifying and fixing memory leaks.</li>
-                            </ul>
-                        </div>
-                    </div>
-            
-                    <!-- Skills Section -->
-                    <div class="mt-8">
-                        <h3 class="text-2xl font-semibold border-b-2 border-neutral-200 dark:border-neutral-600 pb-2">Skills</h3>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
-                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">Python</span>
-                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">React</span>
-                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">Node.js</span>
-                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">SQL</span>
-                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">Docker</span>
-                            <span class="bg-neutral-200 dark:bg-neutral-700 text-sm font-medium px-3 py-1 rounded-full">AWS</span>
-                        </div>
-                    </div>
-            
-                    <!-- Education Section -->
-                    <div class="mt-8">
-                        <h3 class="text-2xl font-semibold border-b-2 border-neutral-200 dark:border-neutral-600 pb-2">Education</h3>
-                        <div class="mt-4">
-                             <div class="flex flex-col sm:flex-row justify-between items-baseline">
-                                <h4 class="text-xl font-bold">M.S. in Computer Science</h4>
-                                <p class="text-sm text-neutral-500 dark:text-neutral-400">2014 - 2016</p>
-                            </div>
-                            <p class="text-md text-neutral-600 dark:text-neutral-400 italic">University of Technology</p>
-                        </div>
-                    </div>
+                <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Personal Project – Tools: Tableau, Excel</p>
+                <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
+                    <li>Analyzed Airbnb listing data to uncover trends in pricing, availability, and host popularity trends.</li>
+                    <li>Built interactive dashboards to visualize host activity, customer preferences, and regional patterns.</li>
+                    <li>Provided actionable insights into booking behavior and host performance.</li>
+                    <li><a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View Viz &rarr;</a></li>
+                </ul>
+            </div>
+            <!-- Project 2 -->
+            <div class="mt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                    <h4 class="text-lg font-bold uppercase">DATA PROFESSIONAL SURVEY ANALYSIS USING POWER BI</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">March 2025</p>
                 </div>
+                <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Personal Project – Tools: Power BI, Excel</p>
+                <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
+                    <li>Built an interactive dashboard to visualize survey data of 630 participants across countries, occupations, and gender.</li>
+                    <li>Analyzed trends in average salaries, job satisfaction, and preferred programming languages among data professionals.</li>
+                    <li><a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">View Viz &rarr;</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Training and Experience Section -->
+        <div class="mt-8">
+            <h3 class="text-2xl font-semibold">Training and Experience</h3>
+            <hr class="mt-3 mb-6 border-neutral-200 dark:border-neutral-700">
+            <!-- Training 1 -->
+            <div class="mt-6">
+                <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                    <h4 class="text-lg font-bold uppercase">MACHINE LEARNING, POWER BI AND TABLEAU</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">May 2024 - July 2024</p>
+                </div>
+                <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Skill Ocean – Rajasthan, India <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">[📜 View Certificate]</a></p>
+                <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
+                    <li>Completed training in Machine Learning, Tableau, and Power BI, building strong skills in data analysis, visualization, and predictive modeling.</li>
+                </ul>
+            </div>
+            <!-- Training 2 -->
+            <div class="mt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                    <h4 class="text-lg font-bold uppercase">DEEP LEARNING, NLP AND GPT TECHNOLOGIES</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">March 2025 - May 2025</p>
+                </div>
+                <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Upflairs Pvt Ltd – Rajasthan, India <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">[📜 View Certificate]</a></p>
+                <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
+                    <li>Completed hands-on training in Deep Learning, working with ANN, CNN, RNN, and NLP concepts to build and evaluate neural networks for real-world tasks.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Certificates Section -->
+            <div class="mt-8">
+                <h3 class="text-2xl font-semibold">Certificates</h3>
+                <hr class="mt-3 mb-6 border-neutral-200 dark:border-neutral-700">
+                
+                <!-- Certificate 1 -->
+                <div class="mt-6">
+                    <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                        <h4 class="text-lg font-bold uppercase">DATA ANALYTICS INTERNSHIP </h4>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400">June 2025 - July 2025</p>
+                    </div>
+                    <p class="text-md text-neutral-600 dark:text-neutral-400 italic">CollegeTips.in <a href="#" class="text-neutral-600 dark:text-neutral-300 font-medium hover:underline">[📜 View Certificate]</a></p>
+                    <ul class="list-disc list-inside mt-2 text-neutral-600 dark:text-neutral-300 space-y-1">
+                        <li>Completed a 30-day internship focused on data collection, cleaning, analysis, and visualization tasks.</li>
+                        <li>Developed dashboards and performed exploratory data analysis (EDA) to extract meaningful insights.</li>
+                        <li>Honed skills in tools like Excel, SQL, Python, and Power BI.</li>
+                        <li>Recognized for being punctual, hardworking, and inquisitive.</li>
+                    </ul>
+                </div>
+            </div>
+
+        <!-- Education Section -->
+        <div class="mt-8">
+            <h3 class="text-2xl font-semibold">Education</h3>
+            <hr class="mt-3 mb-6 border-neutral-200 dark:border-neutral-700">
+            <!-- Education 1 -->
+            <div class="mt-6">
+                <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                    <h4 class="text-lg font-bold uppercase">B.TECH IN ARTIFICIAL INTELLIGENCE & DATA SCIENCE</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">2022-2026</p>
+                </div>
+                <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Bikaner Technical University – Rajasthan, India | GPA: 9/10</p>
+            </div>
+            <!-- Education 2 -->
+            <div class="mt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-baseline">
+                    <h4 class="text-lg font-bold uppercase">HIGH SCHOOL</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400">2020-2022</p>
+                </div>
+                <p class="text-md text-neutral-600 dark:text-neutral-400 italic">Achievers Academy – Rajasthan, India | Percentage: 84</p>
+            </div>
+        </div>
+    </div>
             </section>
 
             <!-- 
@@ -269,19 +375,21 @@
                 <div class="mt-6 space-y-6">
                      <!-- Blog Post Item 1 -->
                     <div class="blog-post bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
-                        <h3 class="font-bold text-xl">My First Blog Post</h3>
-                        <p class="text-sm text-neutral-500 dark:text-neutral-400">Published on January 1, 2024</p>
+                        <h3 class="font-bold text-xl">What I’m Doing These Days</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400">Published on September 5, 2025</p>
                         <div class="mt-2 text-neutral-600 dark:text-neutral-400">
-                            <p>A short excerpt or summary of the blog post goes here... <span class="full-content hidden">This is the rest of the content that will be revealed. It expands on the initial summary, providing more detail, context, and the main body of the blog post. You can write several paragraphs here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p>
+                            <p>Right now, I’m focused on finding internships where I can apply my skills and gain real-world experience... <span class="full-content hidden">Alongside that, I’m sharpening my abilities in data analytics with Excel, Power BI, Tableau, and SQL, while also exploring new data science concepts and AI tools.<br> Each day is about learning, practicing, and building confidence as I move closer to becoming a skilled data professional.</span></p>
                         </div>
                         <button class="read-more-btn text-neutral-600 dark:text-neutral-300 font-medium hover:underline mt-4">Read More &rarr;</button>
                     </div>
                      <!-- Blog Post Item 2 -->
                      <div class="blog-post bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
-                        <h3 class="font-bold text-xl">Understanding JavaScript Closures</h3>
-                        <p class="text-sm text-neutral-500 dark:text-neutral-400">Published on February 15, 2024</p>
+                        <h3 class="font-bold text-xl">My First Blog Post</h3>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400">Published on September 5, 2025</p>
                         <div class="mt-2 text-neutral-600 dark:text-neutral-400">
-                            <p>A deep dive into one of JavaScript's fundamental concepts... <span class="full-content hidden">Closures are a core concept in JavaScript that every developer should understand. A closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time. This allows for powerful patterns such as data privacy and currying.</span></p>
+                            <p>Hi, I’m Meet 👋 and this is my first blog post. I want to share how I started my journey into data science and why it excites me... <span class="full-content hidden">I’ve always been curious about how data can shape decisions. That curiosity pushed me to learn tools like Python, SQL, Excel, Tableau, Power BI, and Streamlit. Along the way, I built projects such as cleaning data in MySQL, creating dashboards in Excel and Power BI, analyzing Airbnb data in Tableau, and even developing an interactive dashboard with Streamlit.
+
+Each project helped me understand how raw data can turn into clear insights. It wasn’t always smooth, but every challenge taught me something new and kept me motivated. <br>Thanks for reading, and stay tuned for more! 🚀</span></p>
                         </div>
                         <button class="read-more-btn text-neutral-600 dark:text-neutral-300 font-medium hover:underline mt-4">Read More &rarr;</button>
                     </div>
@@ -292,7 +400,7 @@
             ==========================================================================
             OTHERS SECTION
             ==========================================================================
-            -->
+            
             <section id="others" class="content-section hidden">
                 <h2 class="text-3xl md:text-4xl font-bold">Other Things</h2>
                  <div class="mt-6 p-6 bg-white dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700">
@@ -301,6 +409,18 @@
             </section>
 
         </main>
+        -->
+        <!-- 
+==========================================================================
+FOOTER SECTION
+==========================================================================
+-->
+<footer class="p-8 text-center text-sm text-neutral-500 dark:text-neutral-400">
+    <hr class="w-16 mx-auto mb-6 border-neutral-300 dark:border-neutral-600">
+    <p>&copy; <span id="copyright-year">2025</span> Meet</p>
+    <p class="mt-2">Built with HTML, Tailwind CSS, and JavaScript.</p>
+</footer>
+</div>
     </div>
 
     <!-- Overlay for mobile menu -->
@@ -406,6 +526,18 @@
                 });
             }
 
+            // Listen for clicks on special internal links within the content
+            document.querySelector('main').addEventListener('click', function(e) {
+                // Check if the clicked element has the 'internal-link' class
+                if (e.target.classList.contains('internal-link')) {
+                    e.preventDefault(); // Prevent the link from trying to jump
+                    const targetId = e.target.dataset.target;
+                    if (targetId) {
+                        navigateTo(targetId);
+                    }
+                }
+            });
+
             // Navigation link listeners
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -445,6 +577,8 @@
                     } else {
                         button.innerHTML = 'Read Less &larr;';
                     }
+            // Set current year in footer
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
                 });
             });
         });
