@@ -65,6 +65,21 @@
         .animate-slideDown {
             animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
+
+        /* ADD THIS NEW ANIMATION AND CLASS */
+        @keyframes slideUp {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+        .animate-slideUp {
+            animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
     </style>
 </head>
 <body class="bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 font-sans">
@@ -75,7 +90,7 @@
     ==========================================================================
     -->
     <!-- NEW MOBILE HEADER -->
-<div id="mobile-header" class="md:hidden p-6 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex justify-between items-start">
+<div id="mobile-header" class="p-6 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex justify-between items-start">
     <!-- Menu Button -->
     <button id="mobile-menu-button" class="p-2 -ml-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700" aria-label="Open menu">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path></svg>
@@ -648,27 +663,46 @@ document.getElementById('copyright-year').textContent = new Date().getFullYear()
 
             // Mobile header animation logic
             const mobileHeader = document.getElementById('mobile-header');
-            let wasDesktop = window.innerWidth >= 768;
+        let wasDesktop = window.innerWidth >= 768;
 
-            function handleResizeAnimations() {
-                const isDesktop = window.innerWidth >= 768;
-                if (wasDesktop && !isDesktop) {
-                    mobileHeader.classList.remove('animate-slideDown');
-                    void mobileHeader.offsetWidth; 
-                    mobileHeader.classList.add('animate-slideDown');
-                }
-                wasDesktop = isDesktop;
+        // On initial page load, set the correct visibility and play animation if needed
+        if (wasDesktop) {
+            mobileHeader.style.display = 'none';
+        } else {
+            mobileHeader.style.display = 'flex';
+            mobileHeader.classList.add('animate-slideDown');
+        }
+
+        function handleResizeAnimations() {
+            const isDesktop = window.innerWidth >= 768;
+
+            // Condition 1: Switched FROM desktop TO mobile
+            if (wasDesktop && !isDesktop) {
+                mobileHeader.style.display = 'flex'; // 1. Make the header visible again
+                mobileHeader.classList.remove('animate-slideUp'); // 2. Reset exit animation
+                mobileHeader.classList.add('animate-slideDown');    // 3. Play the entrance animation
+            } 
+            // Condition 2: Switched FROM mobile TO desktop
+            else if (!wasDesktop && isDesktop) {
+                mobileHeader.classList.remove('animate-slideDown'); // 1. Reset entrance animation
+                mobileHeader.classList.add('animate-slideUp');      // 2. Play the new exit animation
+                
+                // 3. IMPORTANT: Hide the element AFTER the animation finishes (500ms)
+                setTimeout(() => {
+                    mobileHeader.style.display = 'none';
+                }, 500); 
             }
+            
+            // Update the state for the next resize event
+            wasDesktop = isDesktop;
+        }
 
-            if (!wasDesktop) {
-                mobileHeader.classList.add('animate-slideDown');
-            }
-
-            window.addEventListener('resize', handleResizeAnimations);
+        window.addEventListener('resize', handleResizeAnimations);
         });
     </script>
 </body>
 </html>
+
 
 
 
